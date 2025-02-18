@@ -1,27 +1,34 @@
-# Stock Momentum Trading Strategy
+# Momentum Trading Strategy
 
-A simple implementation of a momentum-based trading strategy using Python and common financial libraries.
+A Python implementation of a momentum-based trading strategy for stocks. The strategy analyzes price momentum using historical data to generate trading signals and evaluate performance against a buy-and-hold approach.
 
 ## Overview
-This project demonstrates:
-- Financial data handling with pandas
-- Momentum strategy implementation
-- Performance analysis and visualization
-- Real-world trading strategy evaluation
 
-## Requirements
-```bash
-pip install -r requirements.txt
-```
+The strategy:
+- Calculates momentum using 10-day returns
+- Takes long positions when momentum is in the top 10th percentile
+- Compares performance against buy-and-hold strategy
+- Provides visualization of strategy performance
+
+## Key Features
+
+- Data retrieval using yfinance
+- Momentum calculation and signal generation
+- Performance metrics calculation:
+  - Total Return
+  - Sharpe Ratio
+  - Maximum Drawdown
+- Strategy visualization using matplotlib
+
+## Implementation
+
+The implementation is contained in a Jupyter notebook that:
+1. Fetches historical stock data
+2. Calculates momentum indicators
+3. Generates trading signals
+4. Evaluates strategy performance
+5. Visualizes results through comparison charts
 
 ## Usage
-Open `momentum_strategy.ipynb` in Jupyter Notebook or Jupyter Lab:
-```bash
-jupyter notebook momentum_strategy.ipynb
-```
 
-## Strategy Details
-- Uses 10-day returns to measure momentum
-- Takes long positions when momentum is strong
-- Compares against buy-and-hold benchmark
-- Includes key performance metrics (Sharpe ratio, max drawdown)
+Open the `momentum_strategy.ipynb` notebook in Jupyter and run all cells. The notebook is well-documented with comments explaining each step of the implementation.
